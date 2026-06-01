@@ -21,7 +21,6 @@ Metaname <support@metaname.nz> 2021-05-06
 import json
 
 import requests
-import zope.interface
 
 from certbot import errors
 from certbot import interfaces
@@ -86,8 +85,6 @@ class MetanameApiClient:
 ## Certbot plugin implementation
 
 
-@zope.interface.implementer(interfaces.IAuthenticator)
-@zope.interface.provider(interfaces.IPluginFactory)
 class Authenticator(dns_common.DNSAuthenticator):
     """
     Certbot DNS authenticator using the Metaname DNS API

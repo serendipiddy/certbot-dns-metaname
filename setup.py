@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name="certbot-dns-metaname",
-    version="0.0.2",
+    version="0.0.3",
     description="Certbot DNS plugin for the Metaname API",
     url="https://github.com/metaname/certbot-dns-metaname",
     author="Metaname",
@@ -18,7 +18,7 @@ setup(
     ],
     packages=find_packages(),
     include_package_data=True,
-    install_requires=["certbot", "zope.interface", "requests"],
+    install_requires=["certbot", "requests"],
     entry_points={
         "certbot.plugins": ["dns-metaname = certbot_dns_metaname:Authenticator"]
     },
